@@ -31,37 +31,24 @@
 #  %teamColor% = The color of the team on tab. (Only a color so you need to put text behind it inorder for it to show.)
 
 # Title of the scoreboard
-title: '&6&lUhcCore'
+title: '&6&lUhc&4!!'
 
 # Scoreboard while waiting...
 waiting:
   - ''
   - '&6Players:'
   - '&a%online% / %needed% Needed'
-  - ''
-  - '&6Team color:'
-  - '&a%teamColor%'
-  - ''
-  - '&6Kit:'
-  - '&a%kit%'
-  - ''
-  - '&6Scenarios:'
-  - '&a%scenarios%'
-  - ''
-  - '&6IP:'
-  - '&aplay.example.com'
 
 # Scoreboard while game is playing.
 playing:
-  - '&6Meetup: &a%deathmatch%'
+  - ''
+  - '&6%timer-name%: &a%timer-time%'
+  - '&6Time played: &a%time%'
   - '&6Border: &a%border%'
   - '&6Kills: &a%kills%'
   - '&6Players left: &a%alive%'
-  - '&6Y-Layer: &a%ylayer%'
   - '&6Team:'
   - '&a%members-name% &c%members-health% &lHP'
-  - ''
-  - '&aplay.example.com'
 
 
 # Scoreboard while game is in deathmatch.
@@ -69,14 +56,9 @@ deathmatch:
   - '&6Border: &a%border%'
   - '&6Kills: &a%kills%'
   - '&6Players left: &a%alive%'
-  - ''
-  - '&aplay.example.com'
-
 # Scoreboard while in spectator
 spectating:
   - '&6Meetup: &a%deathmatch%'
   - '&6Border: &a%border%'
   - '&6Kills: &a%kills%'
   - '&6Players left: &a%alive%'
-  - ''
-  - '&aplay.example.com'
