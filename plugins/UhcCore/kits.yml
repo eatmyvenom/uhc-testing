@@ -1,0 +1,2 @@
+# Edit kits here, to remove all kits write only an empty node: "kits: {}"
+kits: {}
