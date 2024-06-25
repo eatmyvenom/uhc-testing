@@ -311,7 +311,7 @@ fast-mode:
 
   apple-drops:
     # What percentage of leaves should drop apples? (The default vanilla percentage is 0.5%)
-    percentage: 0.5
+    percentage: 5
     # Set to true if you want all type of trees to drop apples. (By default only oak and dark oak trees drop apples)
     all-trees: true
     # Set to true if you want sheared leaves to drop apples.
@@ -433,10 +433,10 @@ pre-generate-world:
   enable: true
 
   # Between what number of chunks the server will rest to avoid server crashing
-  rest-every-num-of-chunks-ticks: 200
+  rest-every-num-of-chunks-ticks: 250
 
   # Duration of the rest in ticks
-  rest-duration: 10
+  rest-duration: 5
 
 #Setting up the world border
 border:
@@ -453,7 +453,7 @@ border:
   time-to-shrink: 5400
 
   #If moving is set to true, the time in seconds for the border before it starts moving
-  time-before-shrink: 0
+  time-before-shrink: 60
 
 
 # Setting up the deathmatch
