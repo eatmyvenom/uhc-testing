@@ -36,7 +36,7 @@ display:
   motd-loading: Loading ...
   motd-waiting: Waiting ...
   motd-starting: Starting
-  motd-playing: Playing
+  motd-playing: In progress
   motd-ended: Ended
 kick:
   loading: Loading. Please retry in a few minutes.
