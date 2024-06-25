@@ -92,7 +92,7 @@ kill-disconnected-players-after-delay:
 spawn-offline-players: true
 
 #Timer in seconds to auto stop/restart the server when the game as ended (Set to -1 to disable)
-time-before-restart-after-end: 30
+time-before-restart-after-end: -1
 
 #Set it to false to prevent the end of the game if there are no players left (may be useful for private servers with friends playing over several days,
 # it still requires the server to be left running while there are no players on it)
