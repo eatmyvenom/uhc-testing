@@ -1,9 +1,10 @@
 logs
 cache
 world*
-data
-DIM-1
-region
-playerdata
-session.lock
-uid.dat
+*/data
+*/DIM-1
+*/region
+*/playerdata
+*/session.lock
+*/uid.dat
+level.dat*
