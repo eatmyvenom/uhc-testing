@@ -5,7 +5,7 @@ minimal-ready-teams-percentage-to-start: 60
 minimal-ready-teams-to-start: 2
 
 #Choose the minimum number of players connected  to start the countdown when team are ready (in combination with the two above options)
-min-players-to-start: 6
+min-players-to-start: 8
 
 #Choose how much players can be in the same team, set it to 1 to play a game with no teams
 max-players-per-team: 1
@@ -75,10 +75,10 @@ chat-prefix:
 disable-motd: false
 
 # Game difficulty (Choose from this list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Difficulty.html)
-game-difficulty: HARD
+game-difficulty: NORMAL
 
 # When set to false, Advancements (1.12+) will not be announced in chat. Achievements (1.8-1.11) can be turned off in your server.properties
-announce-advancements: true
+announce-advancements: false
 
 # This feature might not make a lot of sense for UHC but if you want to enable natural health regen you can do it here.
 enable-health-regen: false
@@ -306,14 +306,14 @@ fast-mode:
     # Set to true to enable this feature.
     enable: true
     # The percentage of spannable blocks populated with sugar cane. (100 means 100% of the grass/sand blocks along water are filled with sugar cane.)
-    percentage: 10
+    percentage: 1
 
 
   apple-drops:
     # What percentage of leaves should drop apples? (The default vanilla percentage is 0.5%)
-    percentage: 5
+    percentage: 1
     # Set to true if you want all type of trees to drop apples. (By default only oak and dark oak trees drop apples)
-    all-trees: true
+    all-trees: false
     # Set to true if you want sheared leaves to drop apples.
     allow-shears: false
 
@@ -461,9 +461,9 @@ deathmatch:
   # Set it to false to make an endless game until one team wins
   enable: true
   # The time in seconds before the deathmatch starts
-  delay: 3600
+  delay: 7200
   # The time in seconds before PvP is enabled and players are released after the deathmatch starts
-  pvp-delay: 30
+  pvp-delay: 15
   # Set it to true if you want players in deathmatch to be in adventure mode. (false = survival mode)
   deathmatch-adventure-mode: false
 
@@ -487,7 +487,7 @@ deathmatch:
     #Starting size of the border (200 means +200x, -200x, +200z, -200z)
     start-size: 125
     #End size of the border (50 means +50x, -50x, +50z, -50z)
-    end-size: 50
+    end-size: 20
     #If moving is set to true, the time in seconds for the border to shrink to end-size
     time-to-shrink: 600
 
@@ -581,7 +581,7 @@ delay-between-team-teleports: 10
 # This is to allow fast-configuration, to avoid creating new worlds when you only want to configure some other features.
 debug: false
 # When set to true, the game won't end when only one player is left. This can be used to play alone in order to test games.
-one-player-mode: true
+one-player-mode: false
 # When set to false, victory conditions won't be checked, meaning the game never ends automatically.
 enable-victory: true
 
