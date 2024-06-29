@@ -8,7 +8,7 @@ minimal-ready-teams-to-start: 2
 min-players-to-start: 8
 
 #Choose how much players can be in the same team, set it to 1 to play a game with no teams
-max-players-per-team: 2
+max-players-per-team: 8
 
 # If true, every team will be assigned a random team color.
 # If false, enemies will be colored red, and team members will be colored green.
@@ -108,7 +108,7 @@ episode-markers:
 #syntax = POTION_NAME/duration_in_ticks/amplifier
 #reference list https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
 potion-effect-on-start:
-  - REGENERATION/200/10
+  - REGENERATION/200/15
 
 # Customize game behavior to add non-standard minecraft things
 customize-game-behavior:
@@ -579,7 +579,7 @@ delay-between-team-teleports: 10
 
 # When set to true, the plugin won't delete the last world, it will just load it. It will also ignore the map pre-generator.
 # This is to allow fast-configuration, to avoid creating new worlds when you only want to configure some other features.
-debug: true
+debug: false
 # When set to true, the game won't end when only one player is left. This can be used to play alone in order to test games.
 one-player-mode: false
 # When set to false, victory conditions won't be checked, meaning the game never ends automatically.
