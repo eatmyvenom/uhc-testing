@@ -1,0 +1,200 @@
+#########################################################################################
+#                                                                                       #
+# GappleOptions, a free resource by Norska @ https://norska.dev                         #
+#                                                                                       #
+# Wiki: https://norska.dev/docs/welcome                                                 #
+# Support: https://norska.dev/discord/                                                  #
+#                                                                                       #
+# You are editing the config.yml file of GappleOptions.                                 #
+#                                                                                       #
+#########################################################################################
+
+#########################################################################################
+#                                                                                       #
+# NOTE: PLEASE READ BEFORE CONFIGURING!                                                 #
+#                                                                                       #
+# Please consult the wiki for any questions regarding the setup of this plugin, if you  #
+# still require help, open a ticket on my discord server!                               #
+#                                                                                       #
+#########################################################################################
+
+# Note: To avoid any confusion:
+# GAPPLES -> Enchanted Golden Apples
+# CRAPPLES -> Golden Apples   
+
+##################################
+#                                #
+#        GENERAL SETTINGS        #
+#                                #
+##################################
+   
+settings:
+
+   # Note: Whether or not to have have dual cooldowns for golden apples.
+   # Which pretty much means that if you gapple, you cannot crapple 
+   # until the gapple's cooldown is over and vice versa.
+   cooldowns:
+      goldenApples:
+         dualCooldowns: false
+
+   gapples:
+      # Note: Whether or not gapples are usable at all.
+      enabled: false
+      # Note: Whether or not to remove any cooldown for gapples when the player dies.
+      removeCooldownOnDeath: true
+      # Note: Whether or not to allow crafting for gapples.
+      crafting: false
+      # Note: Wheter or not to show a message when players cannot craft gapples.
+      ignoreNoCraftMessage: false
+      # Note: Worlds where gapples cannot be consumed.
+      disabledWorlds:
+      - 'customWorld'
+      # Note: Regions where gapples cannot be consumed (this requires WorldGuard & the hook enabled).
+      disabledRegions:
+      - 'customRegion1'
+      # Note: Commands that run when a gapple is consumed.
+      # Placeholders: {0} = player
+      commands:
+      - 'broadcast {0} gappled!'
+      # Note: Commands to run after the cooldown for a gapple is over (per player).
+      # Placeholders: {0} = player
+      commandsAfterCooldownIsOver:
+      - 'broadcast {0} has no longer a gapple cooldown!'
+      # Note: Fully override the effects that gapples give upon consumption.
+      customEffects:
+         enabled: false
+         settings:
+            # Note: The amount of hearts gapples replenish (1 Heart = 2.0).
+            giveHealth: 2.0
+            # Note: The amount of saturation gapples replenish.
+            giveSaturation: 2
+            # Note: The amount of saturation gapples replenish.
+            giveHungerPoints: 2
+            # Note: The potion effects that are given upon consumption.
+            # Format: <POTION EFFECT NAME>,<LEVEL>,<DURATION>, for example REGENERATION,1,30.
+            potions:
+            - 'REGENERATION,1,30'
+            - 'SPEED,1,30'
+            # Note: Whether or not to set a specific potion time or add it on top of an existing effect (ONLY if the level of the effect is the same).
+            stackPotionDuration: true
+            
+   crapples:
+      # Note: Whether or not crapples are usable at all.
+      enabled: true
+      # Note: Whether or not to remove any cooldown for crapples when the player dies.
+      removeCooldownOnDeath: true
+      # Note: Whether or not to allow crafting for crapples.
+      crafting: true
+      # Note: Worlds where crapples cannot be consumed.
+      disabledWorlds:
+      - 'customWorld'
+      # Note: Regions where crapples cannot be consumed (this requires WorldGuard & the hook enabled).
+      disabledRegions:
+      - 'customRegion1'
+      # Note: Commands that run when a crapple is consumed.
+      # Placeholders: {0} = player
+      commands:
+      - 'broadcast {0} crappled!'
+      # Note: Commands to run after the cooldown for a crapple is over (per player).
+      # Placeholders: {0} = player
+      commandsAfterCooldownIsOver:
+      - 'broadcast {0} has no longer a crapple cooldown!'
+      # Note: Fully override the effects that crapples give upon consumption.
+      customEffects:
+         enabled: false
+         settings:
+            # Note: The amount of hearts gapples replenish (1 Heart = 2.0).
+            giveHealth: 2.0
+            # Note: The amount of saturation gapples replenish.
+            giveSaturation: 1
+            # Note: The amount of saturation gapples replenish.
+            giveHungerPoints: 1
+            # Note: The potion effects that are given upon consumption.
+            # Format: <POTION EFFECT NAME>,<LEVEL>,<DURATION>, for example REGENERATION,1,30.
+            potions:
+            - 'REGENERATION,1,30'
+            - 'SPEED,1,30'
+            # Note: Whether or not to set a specific potion time or add it on top of an existing effect (ONLY if the level of the effect is the same).
+            stackPotionDuration: false
+            
+   enderpearls:
+      # Note: Whether or not enderpearls are usable at all.
+      enabled: true
+      # Note: Whether or not to receive fall damage from enderpearls.
+      disableFallDamage: true
+      # Note: Whether or not to remove any cooldown for enderpearls when the player dies.
+      removeCooldownOnDeath: true
+      # Note: Worlds where enderpearls cannot be used.
+      disabledWorlds:
+      - 'customWorld'
+      # Note: Regions where enderpearls cannot be used (this requires WorldGuard & the hook enabled).
+      disabledRegions:
+      - 'customRegion1'
+      # Note: Commands that run when a crapple is consumed.
+      # Placeholders: {0} = player
+      commands:
+      - 'broadcast {0} used an enderpeal!'
+      # Note: Commands to run after the cooldown for an enderpearl is over (per player).
+      # Placeholders: {0} = player
+      commandsAfterCooldownIsOver:
+      - 'broadcast {0} has no longer an enderpearl cooldown!'
+
+##################################
+#                                #
+#    VALUE DISPLAY SETTINGS      #
+#                                #
+################################## 
+
+# Note: Configure how PlaceholderAPI placeholders appear when the player does not have an active cooldown.
+placeholderapi:
+   usableCrapple: '&aReady'
+   usableGapple: '&aReady'
+   usableEnderpearl: '&aReady'  
+
+# Note: Configure how the cooldowns are formatted.
+format:
+   seconds: 's'
+   second: 's'
+   minutes: 'm '
+   minute: 'm '
+   hours: 'h '
+   hour: 'h '
+   days: ''
+   day: ''
+   splitter: 'and '
+
+##################################
+#                                #
+#             HOOKS              #
+#                                #
+##################################
+   
+hooks:
+
+   worldGuard:
+      enabled: true       
+
+##################################
+#                                #
+#         EXTRA SETTINGS         #
+#                                #
+##################################
+
+# Note: Whether or not to drop crapples or gapples when killing a player.   
+extra:
+   deathDrops:
+      crapples:
+         enabled: false
+         amount: 3
+      gapples:
+         enabled: false
+         amount: 1
+
+##################################
+#                                #
+#    UPDATE NOTIFIER SETTINGS    #
+#                                #
+##################################
+          
+updates:
+   notifications: false    

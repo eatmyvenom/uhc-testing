@@ -1,0 +1,434 @@
+#########################################################################################
+#                                                                                       #
+# GappleOptions, a free resource by Norska @ https://norska.dev                         #
+#                                                                                       #
+# Wiki: https://norska.dev/docs/welcome                                                 #
+# Support: https://norska.dev/discord/                                                  #
+#                                                                                       #
+# You are editing the messages.yml file of GappleOptions.                               #
+#                                                                                       #
+#########################################################################################
+
+#########################################################################################
+#                                                                                       #
+# NOTE: PLEASE READ BEFORE CONFIGURING!                                                 #
+#                                                                                       #
+# If PlaceholderAPI is installed you can use any placeholder inside messages,           #
+# make sure to properly install any extension using /papi ecloud.                       #
+#                                                                                       #
+# Placeholders that are inside {} (e.g {0}, {1}) are inner placeholders.                #
+# To use PAPI's placeholders, use them normally, like %player_gamemode%, etc.           #
+#                                                                                       #
+# Scopes:                                                                               #
+# 1) Global -> All online players will get the message.                                 #
+# 2) User -> User that executed commands/triggered event will get the message.          #
+# 3) Limited -> Only users/systems with specific perms will get the message.            #
+#                                                                                       #
+# Note: Scopes are per message and cannot be manually altered.                          #
+#                                                                                       #
+#########################################################################################     
+
+# Note: To avoid any confusion:
+# GAPPLES -> Enchanted Golden Apples
+# CRAPPLES -> Golden Apples
+
+# Note: Whether or not to strip colors from messages shown to console.
+stripConsole: false
+
+messages:
+
+   # Note: Use {PREFIX} in any message to add the below prefix!
+   prefix: "<GRADIENT:FFE609>&lGappleOptions</GRADIENT:FF3CBD>&r"
+
+   EVENT_GAPPLES_DISABLED:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fGapples are disabled!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fGapples are disabled!' 
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fGapples are disabled.'
+         
+   EVENT_GAPPLES_CRAFTING_DISABLED:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fYou cannot craft gapples!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f»  &fYou cannot craft gapples!' 
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fYou cannot craft gapples!' 
+         
+   EVENT_GAPPLES_CONSUME:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fConsumed &e&lGAPPLE&f! &7(Cooldown: &e{0}&7)'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fConsumed &e&lGAPPLE&f! &7(Cooldown: &e{0}&7)' 
+      titles:
+         enabled: false
+         titleContent: '&e&lGAPPLED!' 
+         subtitleContent: '&7(Cooldown: &e{0}&7)'
+         
+   EVENT_GAPPLES_COOLDOWN:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &e&lGAPPLES &fare still on cooldown &7(Cooldown: &e{0}&7)'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &e&lGAPPLES &fare still on cooldown! &7(Cooldown: &e{0}&7)'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&e&lGAPPLES &7(Cooldown: &e{0}&7)'
+         
+   EVENT_GAPPLES_COOLDOWN_OVER:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fCooldowns for &e&lGAPPLES &fare over!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fCooldowns for &e&lGAPPLES &fare over!'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fYou can now use a &e&lGAPPLE &fagain!'
+         
+   ###############################           
+       
+   EVENT_CRAPPLES_DISABLED:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fCrapples are disabled!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fCrapples are disabled!' 
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fCrapples are disabled.'
+
+   EVENT_CRAPPLES_CONSUME:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fConsumed &e&lCRAPPLE&f! &7(Cooldown: &e{0}&7)'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fConsumed &e&lCRAPPLE&f! &7(Cooldown: &e{0}&7)' 
+      titles:
+         enabled: false
+         titleContent: '&e&lCRAPPLE!' 
+         subtitleContent: '&7(Cooldown: &e{0}&7)'
+         
+   EVENT_CRAPPLES_COOLDOWN:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &e&lCRAPPLES &fare still on cooldown &7(Cooldown: &e{0}&7)'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &e&lCRAPPLES &fare still on cooldown! &7(Cooldown: &e{0}&7)'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&e&lCRAPPLES &7(Cooldown: &e{0}&7)'
+         
+   EVENT_CRAPPLES_COOLDOWN_OVER:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fCooldowns for &e&lCRAPPLES &fare over!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '&7[&a&l✓&7] &fCooldowns for &e&lCRAPPLES &fare over!'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fYou can now use a &e&lCRAPPLE &fagain!'      
+         
+   ###############################  
+         
+   EVENT_ENDERPEARLS_DISABLED:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fEnderpearls are disabled!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fEnderpearls are disabled!' 
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fEnderpearls are disabled.'
+         
+   EVENT_ENDERPEARLS_CONSUME:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fUsed &d&lENDERPEARL&f! &7(Cooldown: &e{0}&7)' 
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fUsed &d&lENDERPEARL&f! &7(Cooldown: &e{0}&7)' 
+      titles:
+         enabled: false
+         titleContent: '&d&lENDERPEARLED!' 
+         subtitleContent: '&7(Cooldown: &e{0}&7)'
+         
+   EVENT_ENDERPEARLS_COOLDOWN:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &d&lENDERPEARLS &fare still on cooldown &7(Cooldown: &e{0}&7)'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &d&lENDERPEARLS &fare still on cooldown! &7(Cooldown: &e{0}&7)'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&d&lENDERPEARLS &7(Cooldown: &e{0}&7)'
+         
+   EVENT_ENDERPEARLS_COOLDOWN_OVER:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fCooldowns for &d&lENDERPEARLS &fare over!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '&7[&a&l✓&7] &fCooldowns for &d&lENDERPEARLS &fare over!'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fYou can now use an &d&lENDERPEARL &fagain!'  
+         
+   ###############################  
+         
+   EVENT_DUALCOOLDOWN:
+   # Placeholders: {0} = cooldown
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fYou can only use one golden apple type at a time!'
+         - ''
+      actionbar:
+         enabled: false
+         content: '{PREFIX} &f» &fDual cooldown is enabled! &7(&e{0} left&7)'
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fDual cooldown is enabled! &7(&e{0} left&7)'  
+
+   ############################### 
+
+   COMMAND_RESET_SUCCESS:
+   # Placeholders: {0} = player, {1} = item (gapples, crapples, enderpearls)
+   # Scope: Limited (Command Sender)
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ""
+         - "{PREFIX} &f» &fReset &e{1} &fcooldown for &e{0}&f!"
+         - ""
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &fReset &e{1} &fcooldown for &e{0}&f!"
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fReset &e{1} &fcooldown for &e{0}&f!'
+         
+   COMMAND_RESET_SUCCESS_PLAYER:
+   # Placeholders: {0} = Command Sender, {1} = item (gapples, crapples, enderpearls)
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ""
+         - "{PREFIX} &f» &e{0} &freset your &e{1} &fcooldown!"
+         - ""
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &e{0} &freset your &e{1} &fcooldown!"
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&e{0} &freset your &e{1} &fcooldown!'
+         
+   COMMAND_RESET_ERROR_NOT_ONLINE:
+   # Placeholders: {0} = player
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ""
+         - "{PREFIX} &f» &e{0} &fis not online!"
+         - ""
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &e{0} &fis not online!"
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&e{0} &fis not online!'
+         
+   COMMAND_RESET_ERROR_NOT_VALID:
+   # Placeholders: {0} = input
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - ' {PREFIX} &f» &fCould not reset cooldown because item argument is faulty!'
+         - ''
+         - '  &eDetails:'
+         - '  &6• &eYour argument: &f{0}'
+         - '  &6• &eExpected argument: &fCrapple, Gapple, Enderpearl'
+         - ''
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &fItem argument is faulty!"
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fItem Argument is faulty!'
+         
+   COMMAND_RESET_ERROR_NO_COOLDOWN:
+   # Placeholders: {0} = player, {1} = item (gapples, crapples, enderpearls)
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ""
+         - "{PREFIX} &f» &e{0} &fdoes not have an active cooldown for &e{1}&f!"
+         - ""
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &e{0} &fhas no cooldown for &e{1}&f!"
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&e{0} &fhas no cooldown for &e{1}&f!'
+         
+   ###############################  
+      
+   COMMAND_RELOAD:
+   # Placeholders: {0} = ms
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ""
+         - "{PREFIX} &f» &fReloaded configuration files. &7(&f{0}ms&7)"
+         - ""
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &fReloaded configuration files. &7(&f{0}ms&7)" 
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fReloaded configuration!'
+         
+   COMMAND_NOPERMISSION:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ''
+         - '{PREFIX} &f» &fYou do not have permission to run this command!'
+         - ''
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &fYou do not have permission to run this command!"       
+      titles:
+         enabled: false
+         titleContent: '{PREFIX}' 
+         subtitleContent: '&fYou do not have permission!'   
+         

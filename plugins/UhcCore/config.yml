@@ -216,7 +216,7 @@ customize-game-behavior:
   # so it is your responsibility to update this configuration accordingly.
   # For older Minecraft versions, use the "History" drop-down menu on the page linked above.
   # The special values "default" (currently the wither spawn sound) and "none" work across Minecraft versions.
-  player-death-sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-death-sound: org.bukkit.Sound#ENTITY_LIGHTNING_BOLT_THUNDER
 
 # This section references optional features to allow to run in fast uhc mode ( = uhc run)
 fast-mode:
@@ -579,7 +579,7 @@ delay-between-team-teleports: 10
 
 # When set to true, the plugin won't delete the last world, it will just load it. It will also ignore the map pre-generator.
 # This is to allow fast-configuration, to avoid creating new worlds when you only want to configure some other features.
-debug: false
+debug: true
 # When set to true, the game won't end when only one player is left. This can be used to play alone in order to test games.
 one-player-mode: false
 # When set to false, victory conditions won't be checked, meaning the game never ends automatically.
