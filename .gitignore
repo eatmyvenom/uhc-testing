@@ -8,3 +8,4 @@ world*
 */session.lock
 */uid.dat
 level.dat*
+*.db

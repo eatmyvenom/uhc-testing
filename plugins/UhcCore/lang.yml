@@ -29,7 +29,7 @@ players:
   send-bungee-disabled: '&cThis command is disabled'
 display:
   message-prefix: '&a[UhcCore]&r'
-  team-prefix: ''
+  team-prefix: '[Team #%teamNumber%] '
   episode-mark: End of episode %episode%!
   spectator-chat: '&7[Spec] &r%player%&r: %message%'
   team-chat: '&a[Team] &r%player%&r: %message%'
