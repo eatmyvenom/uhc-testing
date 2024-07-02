@@ -39,7 +39,7 @@ settings:
 
    gapples:
       # Note: Whether or not gapples are usable at all.
-      enabled: false
+      enabled: true
       # Note: Whether or not to remove any cooldown for gapples when the player dies.
       removeCooldownOnDeath: true
       # Note: Whether or not to allow crafting for gapples.

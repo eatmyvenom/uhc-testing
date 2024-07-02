@@ -12,7 +12,7 @@ max-players-per-team: 8
 
 # If true, every team will be assigned a random team color.
 # If false, enemies will be colored red, and team members will be colored green.
-use-team-colors: true
+use-team-colors: false
 
 # If true, the team color menu will be accessible, which allows team leaders to
 # change the color of their team (if use-team-colors is set to true).
@@ -45,7 +45,7 @@ enable-team-names: false
 time-to-start-when-ready: 15
 
 #The time in seconds before the PVP starts
-time-before-pvp: 1200
+time-before-pvp: 300
 
 # When enabled players of the same team will be able to damage each other.
 enable-friendly-fire: false
@@ -485,7 +485,7 @@ deathmatch:
   # When no deathmatch arena is installed the deathmatch will be at the center of the map.
   center-deathmatch:
     #Starting size of the border (200 means +200x, -200x, +200z, -200z)
-    start-size: 125
+    start-size: 2000
     #End size of the border (50 means +50x, -50x, +50z, -50z)
     end-size: 20
     #If moving is set to true, the time in seconds for the border to shrink to end-size

@@ -1,2 +1,13 @@
 # Edit kits here, to remove all kits write only an empty node: "kits: {}"
-kits: {}
+kits:
+  # Choose a keyword for the kit (not displayed in game)
+  tools:
+    symbol:
+      #Choose what item will represent the kit
+      item: '{"type":"COOKED_BEEF"}'
+      #Choose the name of the item
+      name: Free Food
+    # Write a list of item following the JSON item syntax
+    # To view the correct item item data you can use '/iteminfo' in game (Permission: 'uhc-core.commands.iteminfo')
+    items:
+      - '{"type":"COOKED_BEEF", "amount": 3}'
