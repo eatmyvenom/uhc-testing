@@ -42,7 +42,7 @@ enable-team-names: false
 
 #Choose the coundown time to start the game when enough teams are ready
 #This value must be set to 6 or more. If you set a value of 5 or less, it will cause an unpredictable behavior.
-time-to-start-when-ready: 15
+time-to-start-when-ready: 6
 
 #The time in seconds before the PVP starts
 time-before-pvp: 300
@@ -450,7 +450,7 @@ border:
   end-size: 125
 
   #If moving is set to true, the time in seconds for the border to shrink to end-size
-  time-to-shrink: 3600 # Not deathmatch
+  time-to-shrink: 7200 # Not deathmatch
 
   #If moving is set to true, the time in seconds for the border before it starts moving
   time-before-shrink: 60
@@ -461,7 +461,7 @@ deathmatch:
   # Set it to false to make an endless game until one team wins
   enable: true
   # The time in seconds before the deathmatch starts
-  delay: 3600
+  delay: 7200
   # The time in seconds before PvP is enabled and players are released after the deathmatch starts
   pvp-delay: 15
   # Set it to true if you want players in deathmatch to be in adventure mode. (false = survival mode)
@@ -579,7 +579,7 @@ delay-between-team-teleports: 10
 
 # When set to true, the plugin won't delete the last world, it will just load it. It will also ignore the map pre-generator.
 # This is to allow fast-configuration, to avoid creating new worlds when you only want to configure some other features.
-debug: false
+debug: true
 # When set to true, the game won't end when only one player is left. This can be used to play alone in order to test games.
 one-player-mode: false
 # When set to false, victory conditions won't be checked, meaning the game never ends automatically.

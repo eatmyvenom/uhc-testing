@@ -9,8 +9,8 @@
 
 config-version: 9
 settings:
-  baby-zombie-movement-speed: 0.5
   limit-player-interactions: true
+  baby-zombie-movement-speed: 0.5
 effect-modifiers:
   strength: 1.3
   weakness: -0.5
@@ -23,13 +23,6 @@ data-value-allowed-items: []
 world-settings:
   default:
     verbose: true
-    cache-chunk-maps: false
-    remove-invalid-mob-spawner-tile-entities: true
-    fix-cannons: false
-    tnt-entity-height-nerf: 0
-    use-hopper-check: false
-    all-chunks-are-slime-chunks: false
-    allow-undead-horse-leashing: false
     container-update-tick-rate: 1
     game-mechanics:
       disable-end-credits: false
@@ -45,6 +38,8 @@ world-settings:
     disable-ice-and-snow: false
     tick-next-tick-list-cap: 10000
     tick-next-tick-list-cap-ignores-redstone: false
+    use-hopper-check: false
+    all-chunks-are-slime-chunks: false
     generator-settings:
       canyon: true
       caves: true
@@ -58,6 +53,8 @@ world-settings:
       flat-bedrock: false
     allow-block-location-tab-completion: true
     disable-teleportation-suffocation-check: false
+    cache-chunk-maps: false
+    remove-invalid-mob-spawner-tile-entities: true
     player-blocking-damage-multiplier: 0.5
     optimize-explosions: false
     mob-spawner-tick-rate: 1
@@ -93,5 +90,8 @@ world-settings:
     lava-flow-speed:
       normal: 30
       nether: 10
-    water-over-lava-flow-speed: 5
     disable-explosion-knockback: false
+    water-over-lava-flow-speed: 5
+    fix-cannons: false
+    tnt-entity-height-nerf: 0
+    allow-undead-horse-leashing: false

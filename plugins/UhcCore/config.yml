@@ -92,7 +92,7 @@ kill-disconnected-players-after-delay:
 spawn-offline-players: true
 
 #Timer in seconds to auto stop/restart the server when the game as ended (Set to -1 to disable)
-time-before-restart-after-end: -1
+time-before-restart-after-end: 1
 
 #Set it to false to prevent the end of the game if there are no players left (may be useful for private servers with friends playing over several days,
 # it still requires the server to be left running while there are no players on it)
@@ -579,7 +579,7 @@ delay-between-team-teleports: 10
 
 # When set to true, the plugin won't delete the last world, it will just load it. It will also ignore the map pre-generator.
 # This is to allow fast-configuration, to avoid creating new worlds when you only want to configure some other features.
-debug: false
+debug: true
 # When set to true, the game won't end when only one player is left. This can be used to play alone in order to test games.
 one-player-mode: false
 # When set to false, victory conditions won't be checked, meaning the game never ends automatically.

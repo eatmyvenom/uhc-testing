@@ -4,5 +4,6 @@
 # Loop while file "STATUS" says "RUNNING"
 while [ "$(cat ./STATUS)" = "RUNNING" ];
 do
+    ./scripts/update.sh
     ./scripts/start.sh
 done

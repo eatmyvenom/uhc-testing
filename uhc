@@ -38,26 +38,34 @@ if [ "$COMMAND" == "update" ]; then
   ./scripts/update.sh
 fi
 
+# Force kill command
+if [ "$COMMAND" == "forcekill" ]; then
+  echo "Force killing uhc..."
+  killall -9 java
+  killall -9 screen
+fi
+
+# Upload log
+if [ "$COMMAND" == "log" ]; then
+  echo "Uploading log..."
+  cat ./logs/latest.log | nc termbin.com 9999
+fi
+
 # Mode command
 if [ "$COMMAND" == "mode" ]; then
     MODE=$2
-    echo "Changing mode to $MODE..."
-    case $MODE in
-        "normal")
-            cat plugins/UhcCore/config.default.yml > plugins/UhcCore/config.yml
-            ;;
-        "1hour")
-            cat plugins/UhcCore/config.1hour.yml > plugins/UhcCore/config.yml
-            ;;
-        "caveonly")
-            cat plugins/UhcCore/config.caveonly.yml > plugins/UhcCore/config.yml
-            ;;
-        "noteams")
-            cat plugins/UhcCore/config.noteams.yml > plugins/UhcCore/config.yml
-            ;;
-        *)
-            echo "Invalid mode. Available modes: normal, 1hour, caveonly, noteams"
-            ;;
-    esac
+    echo "Setting mode to $MODE..."
+    FILE_PATH="./plugins/UhcCore/config.$MODE.yml"
+    MODE_DATA=$(cat $FILE_PATH)
 
+    if([ -z "$MODE_DATA" ]); then
+        echo "\nMode $MODE does not exist"
+        echo "Available modes:"
+        ls ./plugins/UhcCore/config.*.yml | xargs -n 1 basename | sed 's/config.//g' | sed 's/.yml//g'
+        exit 1
+    fi
+
+    echo "Updating config.yml..."
+    echo "$MODE_DATA" > ./plugins/UhcCore/config.yml
+    echo "Updated config.yml"
 fi
