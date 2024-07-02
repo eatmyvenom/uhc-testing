@@ -11,18 +11,9 @@
 # Forums: http://www.spigotmc.org/
 
 config-version: 8
-commands:
-  log: true
-  spam-exclusions:
-  - /skill
-  silent-commandblock-console: false
-  replace-commands:
-  - setblock
-  - summon
-  - testforblock
-  - tellraw
-  tab-complete: 0
 settings:
+  save-user-cache-on-stop-only: false
+  moved-too-quickly-threshold: 100.0
   bungeecord: false
   late-bind: false
   sample-count: 12
@@ -31,7 +22,6 @@ settings:
   user-cache-size: 1000
   int-cache-limit: 1024
   moved-wrongly-threshold: 0.0625
-  moved-too-quickly-threshold: 100.0
   timeout-time: 60
   restart-on-crash: false
   restart-script: ./start.sh
@@ -43,18 +33,7 @@ settings:
       max: 2048.0
     attackDamage:
       max: 2048.0
-  save-user-cache-on-stop-only: false
   debug: false
-messages:
-  restart: Server is restarting
-  whitelist: You are not whitelisted on this server!
-  unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full!
-  outdated-client: Outdated client! Please use {0}
-  outdated-server: Outdated server! I'm still on {0}
-stats:
-  disable-saving: false
-  forced-stats: {}
 timings:
   enabled: true
   verbose: true
@@ -64,16 +43,41 @@ timings:
   - settings.bungeecord-addresses
   history-interval: 300
   history-length: 3600
+commands:
+  tab-complete: 0
+  log: true
+  spam-exclusions:
+  - /skill
+  silent-commandblock-console: false
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
+stats:
+  disable-saving: false
+  forced-stats: {}
+messages:
+  whitelist: You are not whitelisted on this server!
+  unknown-command: Unknown command. Type "/help" for help.
+  server-full: The server is full!
+  outdated-client: Outdated client! Please use {0}
+  outdated-server: Outdated server! I'm still on {0}
+  restart: Server is restarting
 world-settings:
   default:
     verbose: true
+    arrow-despawn-rate: 1200
+    enable-zombie-pigmen-portal-spawns: true
+    wither-spawn-sound-radius: 0
+    view-distance: 10
     chunks-per-tick: 650
     clear-tick-list: false
     merge-radius:
       exp: 3.0
       item: 2.5
-    wither-spawn-sound-radius: 0
-    view-distance: 10
+    item-despawn-rate: 6000
+    hanging-tick-frequency: 100
     zombie-aggressive-towards-villager: true
     mob-spawn-range: 4
     anti-xray:
@@ -136,7 +140,3 @@ world-settings:
     max-tick-time:
       tile: 50
       entity: 50
-    item-despawn-rate: 6000
-    arrow-despawn-rate: 1200
-    hanging-tick-frequency: 100
-    enable-zombie-pigmen-portal-spawns: true
