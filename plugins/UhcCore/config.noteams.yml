@@ -8,7 +8,7 @@ minimal-ready-teams-to-start: 2
 min-players-to-start: 8
 
 #Choose how much players can be in the same team, set it to 1 to play a game with no teams
-max-players-per-team: 8
+max-players-per-team: 1
 
 # If true, every team will be assigned a random team color.
 # If false, enemies will be colored red, and team members will be colored green.

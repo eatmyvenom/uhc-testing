@@ -1,0 +1,63 @@
+#!/bin/sh
+
+COMMAND=$1
+
+# Start command
+if [ "$COMMAND" == "start" ]; then
+  echo "Starting uhc..."
+  echo "RUNNING" > ./STATUS
+  # Execute command and use GNU screen to keep the server running
+    screen -dmS uhc ./scripts/loop.sh
+fi
+
+# Stop command
+if [ "$COMMAND" == "stop" ]; then
+  echo "Stopping uhc..."
+  echo "STOPPING" > ./STATUS
+  screen -S uhc -X stuff "stop$(printf \\r)"
+  echo "STOPPED" > ./STATUS
+fi
+
+# Restart command
+if [ "$COMMAND" == "restart" ]; then
+  echo "Restarting uhc..."
+  screen -t uhc -X stuff "stop$(printf \\r)"
+  sleep 5
+  screen -dmS uhc ./scripts/start.sh
+fi
+
+# Console command
+if [ "$COMMAND" == "console" ]; then
+  echo "Opening console..."
+  screen -r uhc
+fi
+
+# Update command
+if [ "$COMMAND" == "update" ]; then
+  echo "Updating uhc..."
+  ./scripts/update.sh
+fi
+
+# Mode command
+if [ "$COMMAND" == "mode" ]; then
+    MODE=$2
+    echo "Changing mode to $MODE..."
+    case $MODE in
+        "normal")
+            cat plugins/UhcCore/config.default.yml > plugins/UhcCore/config.yml
+            ;;
+        "1hour")
+            cat plugins/UhcCore/config.1hour.yml > plugins/UhcCore/config.yml
+            ;;
+        "caveonly")
+            cat plugins/UhcCore/config.caveonly.yml > plugins/UhcCore/config.yml
+            ;;
+        "noteams")
+            cat plugins/UhcCore/config.noteams.yml > plugins/UhcCore/config.yml
+            ;;
+        *)
+            echo "Invalid mode. Available modes: normal, 1hour, caveonly, noteams"
+            ;;
+    esac
+
+fi

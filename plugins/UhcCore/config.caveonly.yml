@@ -322,14 +322,14 @@ fast-mode:
 
   # Having this enabled means ores will only spawn in caves, so no strip mining.
   # This does take some time to generate so please make sure you have pre-generate-world enabled.
-  cave-ores-only: false
+  cave-ores-only: true
 
   # Generates more ore in the map
   generate-vein:
 
     # Set it to true to enable this feature.
     # If requires pre-generate-world to be enabled in order to generate more ores
-    enable: false
+    enable: true
 
     # Configure the blocks to be generated
     # The names should be existing material names
@@ -338,10 +338,10 @@ fast-mode:
 
       COAL_ORE:
         # Minimum generated veins per chunk
-        min-veins-per-chunk: 2
+        min-veins-per-chunk: 3
 
         # Maximum generated veins per chunk
-        max-veins-per-chunk: 5
+        max-veins-per-chunk: 10
 
         # Minimum generated block per vein
         min-blocks-per-vein: 5
@@ -357,24 +357,24 @@ fast-mode:
 
       # Same config with other ores ...
       IRON_ORE:
-        min-veins-per-chunk: 2
+        min-veins-per-chunk: 3
         max-veins-per-chunk: 10
         min-blocks-per-vein: 4
         max-blocks-per-vein: 8
         min-y: 0
         max-y: 60
       GOLD_ORE:
-        min-veins-per-chunk: 2
-        max-veins-per-chunk: 5
+        min-veins-per-chunk: 3
+        max-veins-per-chunk: 7
         min-blocks-per-vein: 2
         max-blocks-per-vein: 8
         min-y: 0
         max-y: 60
       DIAMOND_ORE:
         min-veins-per-chunk: 2
-        max-veins-per-chunk: 4
+        max-veins-per-chunk: 5
         min-blocks-per-vein: 2
-        max-blocks-per-vein: 5
+        max-blocks-per-vein: 6
         min-y: 0
         max-y: 60
       LAPIS_ORE:
