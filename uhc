@@ -21,9 +21,13 @@ fi
 # Restart command
 if [ "$COMMAND" == "restart" ]; then
   echo "Restarting uhc..."
+  echo
+  echo "STOPPING" > ./STATUS
   screen -t uhc -X stuff "$(printf \\r)stop$(printf \\r)"
-  sleep 5
-  screen -dmS uhc ./scripts/start.sh
+  echo "Server stop initiated"
+  sleep 15
+  echo "Server is probably stopped... starting again"
+  screen -dmS uhc ./scripts/loop.sh
 fi
 
 # Console command
