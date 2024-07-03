@@ -18,8 +18,8 @@ fi
 git fetch
 
 # If there are updates then pull them
-if [ "$(git rev-list HEAD...origin/master --count)" != "0" ]; then
-    git pull
+if [ ! -z "$(git log HEAD..origin/master --oneline)" ] || [ "$1" = "--force" ]; then
+    
     echo "Updated to the latest version."
     
     # Restore mode to whatever it was before the update overwrote it

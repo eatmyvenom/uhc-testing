@@ -35,7 +35,7 @@ fi
 # Update command
 if [ "$COMMAND" == "update" ]; then
   echo "Updating uhc..."
-  ./scripts/update.sh
+  ./scripts/update.sh --force
 fi
 
 # Force kill command
