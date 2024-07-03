@@ -10,3 +10,5 @@ world*
 level.dat*
 *.db*
 STATUS
+plugins/UhcCore/config.yml
+plugins/UhcCore/storage.yml

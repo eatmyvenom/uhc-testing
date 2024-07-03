@@ -42,7 +42,7 @@ enable-team-names: false
 
 #Choose the coundown time to start the game when enough teams are ready
 #This value must be set to 6 or more. If you set a value of 5 or less, it will cause an unpredictable behavior.
-time-to-start-when-ready: 15
+time-to-start-when-ready: 6
 
 #The time in seconds before the PVP starts
 time-before-pvp: 300
@@ -92,7 +92,7 @@ kill-disconnected-players-after-delay:
 spawn-offline-players: true
 
 #Timer in seconds to auto stop/restart the server when the game as ended (Set to -1 to disable)
-time-before-restart-after-end: 1
+time-before-restart-after-end: 60
 
 #Set it to false to prevent the end of the game if there are no players left (may be useful for private servers with friends playing over several days,
 # it still requires the server to be left running while there are no players on it)

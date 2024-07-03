@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 COMMAND=$1
 
@@ -14,14 +14,14 @@ fi
 if [ "$COMMAND" == "stop" ]; then
   echo "Stopping uhc..."
   echo "STOPPING" > ./STATUS
-  screen -S uhc -X stuff "stop$(printf \\r)"
+  screen -S uhc -X stuff "$(printf \\r)stop$(printf \\r)"
   echo "STOPPED" > ./STATUS
 fi
 
 # Restart command
 if [ "$COMMAND" == "restart" ]; then
   echo "Restarting uhc..."
-  screen -t uhc -X stuff "stop$(printf \\r)"
+  screen -t uhc -X stuff "$(printf \\r)stop$(printf \\r)"
   sleep 5
   screen -dmS uhc ./scripts/start.sh
 fi
@@ -67,5 +67,6 @@ if [ "$COMMAND" == "mode" ]; then
 
     echo "Updating config.yml..."
     echo "$MODE_DATA" > ./plugins/UhcCore/config.yml
+    echo "$MODE" > ./CURRENT_MODE
     echo "Updated config.yml"
 fi
