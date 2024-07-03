@@ -13,3 +13,4 @@ STATUS
 plugins/UhcCore/config.yml
 plugins/UhcCore/storage.yml
 CURRENT_MODE
+plugins/ProtocolLib/lastupdate

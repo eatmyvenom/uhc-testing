@@ -1,0 +1,10 @@
+paper.yml
+permissions.yml
+spigot.yml
+bukkit.yml
+server.properties
+ops.json
+usercache.json
+whitelist.json
+plugins/UhcCore/[a-z]*\.yml
+plugins/ProtocolLib/lastupdate

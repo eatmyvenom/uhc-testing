@@ -55,22 +55,41 @@ if [ "$COMMAND" == "log" ]; then
   cat ./logs/latest.log | nc termbin.com 9999
 fi
 
+#!/bin/sh
+
+# Function to update mode-specific files
+update_mode_file() {
+    local base_path=$1
+    local mode=$2
+    local target_path=$base_path
+    local mode_file_path="${base_path%.*}.$mode.${base_path##*.}"
+
+    if [ -f "$mode_file_path" ]; then
+        local mode_data=$(cat "$mode_file_path")
+        echo "$mode_data" > "$target_path"
+        echo "Updated $(basename $target_path)"
+    fi
+}
+
 # Mode command
-if [ "$COMMAND" == "mode" ]; then
+if [ "$COMMAND" = "mode" ]; then
     MODE=$2
     echo "Setting mode to $MODE..."
     FILE_PATH="./plugins/UhcCore/config.$MODE.yml"
-    MODE_DATA=$(cat $FILE_PATH)
+    MODE_DATA=$(cat "$FILE_PATH")
 
-    if([ -z "$MODE_DATA" ]); then
+    if [ -z "$MODE_DATA" ]; then
         echo "\nMode $MODE does not exist"
         echo "Available modes:"
         ls ./plugins/UhcCore/config.*.yml | xargs -n 1 basename | sed 's/config.//g' | sed 's/.yml//g'
         exit 1
     fi
 
-    echo "Updating config.yml..."
     echo "$MODE_DATA" > ./plugins/UhcCore/config.yml
+    echo "Updated config.yml..."
     echo "$MODE" > ./CURRENT_MODE
-    echo "Updated config.yml"
+
+    # Update additional mode-specific files
+    update_mode_file "./plugins/UhcCore/kits.yml" "$MODE"
+    # Add other paths as needed
 fi

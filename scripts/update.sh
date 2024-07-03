@@ -13,9 +13,11 @@ fi
 
 STATUS=$(git status --porcelain)
 
-# Ignore the files "server.properties", "paper.yml", "bukkit.yml", "STATUS", "plugins/UhcCore/storage.yml", "plugins/UhcCore/config.yml", and "spigot.yml" as they are modified by the server.
+# Ignore certain files that are allowed to be changed
+# Make sure this is compatible with grep -vE
+IGNORE_FILES=$(cat ./scripts/IGNORE_FILES | tr '\n' '|')
 
-STATUS=$(echo "$STATUS" | grep -v "server.properties" | grep -v "paper.yml" | grep -v "bukkit.yml" | grep -v "STATUS" | grep -v "plugins/UhcCore/storage.yml" | grep -v "plugins/UhcCore/config.yml" | grep -v "spigot.yml")
+STATUS=$(echo "$STATUS" | grep -vE "($IGNORE_FILES)")
 
 if [ ! -z "$STATUS" ]; then
     echo "There are changes in the current directory. Aborting update."
