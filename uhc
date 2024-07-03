@@ -90,6 +90,11 @@ if [ "$COMMAND" = "mode" ]; then
     echo "$MODE" > ./CURRENT_MODE
 
     # Update additional mode-specific files
+    update_mode_file "./plugins/UhcCore/crafts.yml" "$MODE"
     update_mode_file "./plugins/UhcCore/kits.yml" "$MODE"
+    update_mode_file "./plugins/UhcCore/lang.yml" "$MODE"
+    update_mode_file "./plugins/UhcCore/scoreboard.yml" "$MODE"
+    update_mode_file "./plugins/UhcCore/storage.yml" "$MODE"
+    update_mode_file "./plugins/Graves/config/entity.yml" "$MODE"
     # Add other paths as needed
 fi

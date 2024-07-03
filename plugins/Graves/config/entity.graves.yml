@@ -8,7 +8,7 @@ settings:
     # Here we override the options for entities, remember you can copy options from the default section.
     PLAYER: # Override default options for players.
       grave:
-        enabled: false
+        enabled: true
 
     ENDER_DRAGON: # Override default options for Ender Dragons.
       grave:
