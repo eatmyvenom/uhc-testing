@@ -10,4 +10,7 @@ else
     PORT="$DEFAULT_PORT"
 fi
 
-exec java -Xms4G -Xmx8G -jar paper-1.8.8-445.jar -p $PORT
+# Use the JAVA environment variable if it is set otherwise use "java"
+JAVA=${JAVA:-java}
+
+exec $JAVA -Xms4G -Xmx8G -jar paper-1.8.8-445.jar -p $PORT
