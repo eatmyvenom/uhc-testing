@@ -31,7 +31,8 @@ if [ "$COMMAND" == "restart" ]; then
   screen -dmS uhc ./scripts/loop.sh
 fi
 
-# Console command
+# Console or attach command
+
 if [ "$COMMAND" == "console" ]; then
   echo "Opening console..."
   screen -r uhc
