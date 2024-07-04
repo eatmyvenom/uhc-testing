@@ -49,6 +49,7 @@ if [ "$COMMAND" == "forcekill" ]; then
   echo "Force killing uhc..."
   killall -9 java
   killall -9 screen
+  killall -9 loop.sh
 fi
 
 # Upload log
