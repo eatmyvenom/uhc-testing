@@ -12,5 +12,6 @@ fi
 
 # Use the JAVA environment variable if it is set otherwise use "java"
 JAVA=${JAVA:-java}
+RAM=${RAM:-8G}
 
-exec $JAVA -Xms4G -Xmx8G -jar paper-1.8.8-445.jar -p $PORT
+exec $JAVA -Xms$RAM -Xmx$RAM -jar paper-1.8.8-445.jar -p $PORT
