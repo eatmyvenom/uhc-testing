@@ -450,7 +450,7 @@ border:
   end-size: 125
 
   #If moving is set to true, the time in seconds for the border to shrink to end-size
-  time-to-shrink: 7200 # Not deathmatch
+  time-to-shrink: 5400 # Not deathmatch
 
   #If moving is set to true, the time in seconds for the border before it starts moving
   time-before-shrink: 60
@@ -461,7 +461,7 @@ deathmatch:
   # Set it to false to make an endless game until one team wins
   enable: true
   # The time in seconds before the deathmatch starts
-  delay: 7200
+  delay: 5400
   # The time in seconds before PvP is enabled and players are released after the deathmatch starts
   pvp-delay: 15
   # Set it to true if you want players in deathmatch to be in adventure mode. (false = survival mode)
