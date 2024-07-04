@@ -27,6 +27,7 @@ if [ "$COMMAND" == "restart" ]; then
   echo "Server stop initiated"
   sleep 15
   echo "Server is probably stopped... starting again"
+  echo "RUNNING" > ./STATUS
   screen -dmS uhc ./scripts/loop.sh
 fi
 
