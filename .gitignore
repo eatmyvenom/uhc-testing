@@ -9,8 +9,9 @@ world*
 */uid.dat
 level.dat*
 *.db*
-STATUS
 plugins/UhcCore/config.yml
 plugins/UhcCore/storage.yml
-CURRENT_MODE
 plugins/ProtocolLib/lastupdate
+CURRENT_MODE
+STATUS
+PORT
