@@ -8,3 +8,4 @@ usercache.json
 whitelist.json
 plugins/UhcCore/[a-z]*\.yml
 plugins/ProtocolLib/lastupdate
+??.*
