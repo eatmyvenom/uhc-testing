@@ -5,7 +5,7 @@ minimal-ready-teams-percentage-to-start: 60
 minimal-ready-teams-to-start: 2
 
 #Choose the minimum number of players connected  to start the countdown when team are ready (in combination with the two above options)
-min-players-to-start: 8
+min-players-to-start: 10
 
 #Choose how much players can be in the same team, set it to 1 to play a game with no teams
 max-players-per-team: 8
@@ -188,7 +188,7 @@ customize-game-behavior:
     # Set to false to always have permanent day.
     enable: true
     # Time in seconds before permanent day is turned on. (If you want the sun to keep moving the entire day, set to -1)
-    time-before-permanent-day: 1200
+    time-before-permanent-day: -1
 
 
   # Set it to true to allow droping a player head when a player dies

@@ -189,7 +189,7 @@ customize-game-behavior:
     # Set to false to always have permanent day.
     enable: true
     # Time in seconds before permanent day is turned on. (If you want the sun to keep moving the entire day, set to -1)
-    time-before-permanent-day: 1200
+    time-before-permanent-day: -1
 
 
   # Set it to true to allow droping a player head when a player dies
