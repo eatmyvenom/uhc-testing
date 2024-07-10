@@ -108,7 +108,7 @@ episode-markers:
 #syntax = POTION_NAME/duration_in_ticks/amplifier
 #reference list https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
 potion-effect-on-start:
-  - REGENERATION/200/15
+  - REGENERATION/200/30
 
 # Customize game behavior to add non-standard minecraft things
 customize-game-behavior:
